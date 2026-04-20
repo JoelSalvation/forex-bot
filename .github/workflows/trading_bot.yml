@@ -1,4 +1,4 @@
-name: Forex Trading Bot
+name: Forex Signal Bot
 
 on:
   schedule:
@@ -6,8 +6,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-bot:
+  run-signal-bot:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -20,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run trading bot
+      - name: Run signal bot
         env:
-          MT5_PASSWORD: ${{ secrets.MT5_PASSWORD }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python bot.py
