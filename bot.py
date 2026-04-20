@@ -21,7 +21,7 @@ FAST_MA    = 9
 SLOW_MA    = 21
 
 # Free forex API (no key needed)
-API_URL = "https://query1.finance.yahoo.com/v8/finance/chart/EURUSD=X?interval=15m&range=1d"
+API_URL = "https://query1.finance.yahoo.com/v8/finance/chart/EURUSD=X?interval=15m&range=5d"
 
 # ─────────────────────────────────────────────
 # TELEGRAM
